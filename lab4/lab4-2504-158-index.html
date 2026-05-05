@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字展销平台首页-春韵</title>
+    <link rel="stylesheet" href="./css/lab4-2504-158-index.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="./img/logo.png" alt="网站Logo">
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">图书分类</a></li>
+                <li><a href="#">热门推荐</a></li>
+                <li><a href="#">新书上市</a></li>
+                <li><a href="#">联系我们</a></li>
+                <li><a href="#" class="icon-link" title="购物车">🛒</a></li>
+                <li><a href="#" class="icon-link" title="搜索">🔍</a></li>
+                <li><a href="#loginModal" class="login-btn">登录</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item">
+                <img src="./img/hot1.jpg" alt="轮播图1">
+                <div class="carousel-caption">热门图书推荐</div>
+            </div>
+            <div class="carousel-item">
+                <img src="./img/hot2.jpg" alt="轮播图2">
+                <div class="carousel-caption">新书上架</div>
+            </div>
+            <div class="carousel-item">
+                <img src="./img/book1.jpg" alt="轮播图3">
+                <div class="carousel-caption">精选文学</div>
+            </div>
+        </div>
+        <div class="carousel-indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+        </div>
+    </section>
+
+    <main class="main">
+        <aside class="left-sidebar">
+            <h3>图书分类</h3>
+            <ul>
+                <li><a href="#">文学小说</a></li>
+                <li><a href="#">科技计算机</a></li>
+                <li><a href="#">悬疑科幻</a></li>
+                <li><a href="#">少儿读物</a></li>
+                <li><a href="#">生活休闲</a></li>
+            </ul>
+        </aside>
+
+        <section class="content">
+            <div class="book-show">
+                <h3>图书展示</h3>
+                <div class="book-item">
+                    <img src="./img/book1.jpg" alt="图书封面">
+                    <div class="book-info">《哈利波特》</div>
+                </div>
+            </div>
+
+            <div class="hot-recommend">
+                <h3>热门推荐</h3>
+                <div class="hot-books-container">
+                    <div class="hot-book">
+                        <img src="./img/hot1.jpg" alt="热门图书">
+                        <p>《高等数学》</p>
+                    </div>
+                    <div class="hot-book">
+                        <img src="./img/hot2.jpg" alt="热门图书">
+                        <p>《大学英语四级通关》</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="new-books">
+                <h3>新书上市</h3>
+                <table>
+                    <tr>
+                        <th>书名</th>
+                        <th>作者</th>
+                        <th>价格</th>
+                    </tr>
+                    <tr>
+                        <td>《Web前端实战》</td>
+                        <td>张三</td>
+                        <td>59.00元</td>
+                    </tr>
+                    <tr>
+                        <td>《CSS3动画指南》</td>
+                        <td>李四</td>
+                        <td>49.00元</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <aside class="right-sidebar">
+            <h3>促销活动</h3>
+            <p>全场图书满50减20！</p>
+            <p>周年庆限时折扣，错过再等一年！</p>
+        </aside>
+    </main>
+
+    <div id="loginModal" class="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>登录</h2>
+                <a href="#" class="close-btn">&times;</a>
+            </div>
+            <div class="modal-body">
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="username">用户名</label>
+                        <input type="text" id="username" name="username" placeholder="请输入用户名" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">密码</label>
+                        <input type="password" id="password" name="password" placeholder="请输入密码" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">登录</button>
+                </form>
+                <div class="toggle-link">
+                    <a href="#registerModal">切换到注册</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>注册</h2>
+                <a href="#" class="close-btn">&times;</a>
+            </div>
+            <div class="modal-body">
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="regUsername">用户名</label>
+                        <input type="text" id="regUsername" name="regUsername" placeholder="请输入用户名" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regPassword">密码</label>
+                        <input type="password" id="regPassword" name="regPassword" placeholder="请输入密码" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">确认密码</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="请确认密码" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">注册</button>
+                </form>
+                <div class="toggle-link">
+                    <a href="#loginModal">切换到登录</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
